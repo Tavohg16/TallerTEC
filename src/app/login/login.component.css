@@ -1,6 +1,7 @@
 .container-dim {
     height: 100vh;
     padding: 0;
+    background-color: #FBFAF0;
 }
 
 .car-pic {
@@ -16,7 +17,7 @@
     height: 100vh;
     max-width: 35%;
     margin: auto;
-    padding-top:20%
+    padding-top:20%;
 }
 
 form {

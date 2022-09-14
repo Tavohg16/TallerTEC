@@ -1,0 +1,30 @@
+<div class="container-fluid text-center container-dim">
+  <div class="row no-gutters">
+    <div class="col-6 car-pic">
+      <img class="car-image" src="https://i0.wp.com/www.deagenciapanama.com/wp-content/uploads/2020/11/2020-Chevrolet-Corvette-Stingray-245.jpg?fit=2500%2C1666&ssl=1">
+    </div>
+    <div class="col-6 login">
+      <div class="card">
+        <h4 class="card-header">TallerTEC</h4>
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="cedula">Cedula</label>
+                    <input type="text" formControlName="cedula" class="form-control" [ngClass]="{ 'is-invalid': submitted && loginFormControls['cedula'].errors }" />
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" formControlName="contrasena" class="form-control" [ngClass]="{ 'is-invalid': submitted && loginFormControls['contrasena'].errors }" />
+                </div>
+                <div class="form-group mt-3">
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

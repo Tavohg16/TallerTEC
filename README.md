@@ -11,7 +11,7 @@ Este repositorio contiene los archivos de desarrollo de la interfaz gráfica de 
 
 ## Instrucciones de ejecución
 - Ejecute `npm i` en una terminal desde la carpeta principal del proyecto para instalar todas las dependencias necesarias.
-- Ejecute `ng serve` para levantar el servidor de desarrollo. Navegue a http://localhost:4200/. La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
+- Ejecute `npm run local-dev` para levantar el servidor de desarrollo. Navegue a http://localhost:4200/. La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
 
 ## Scaffolding de código
 

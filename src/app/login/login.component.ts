@@ -49,6 +49,8 @@ export class LoginComponent implements OnInit {
                   this.loginService.setLoggedIn(loginResponse.authenticated);
                   if(loginResponse.authenticated) {
                     this.router.navigate(['']);
+                  } else {
+                    alert("Su cedula, contraseña o ambas son inválidas");
                   }
                   this.loading = false;
                 },

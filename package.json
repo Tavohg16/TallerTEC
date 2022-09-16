@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build configuration production",
+    "build-iis:prod": "ng build --watch --configuration production --deploy-url /taller-tec/ --base-href /taller-tec/",
+    "build-iis:dev": "ng build --watch --configuration development --deploy-url /taller-tec/ --base-href /taller-tec/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "local-dev": "ng serve --configuration=development"
+    "local-dev": "ng serve --configuration development",
+    "local-prod": "ng serve --configuration production"
   },
   "private": true,
   "dependencies": {

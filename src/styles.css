@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-    margin: 0px;
-    min-height: 100%;
-    width: 100%;
- }
- 
- body {
-    margin: 0px;
-    min-height: 98vh;
-    width: 100%;
- }
- 
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  min-height: 98vh;
+  width: 100%;
+  background-image: url("https://i.pinimg.com/originals/d7/18/49/d71849548d71ce14cb78ba3a8244532c.jpg"),
+    url("https://www.telegraph.co.uk/content/dam/cars/2019/07/26/TELEMMGLPICT000204200916_trans_NvBQzQNjv4BqGaz3Lazq1iFtTcBPhfQaBIdLstaUr47ZSPkg88Szlc4.jpeg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+}

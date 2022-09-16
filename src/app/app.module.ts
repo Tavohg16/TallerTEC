@@ -11,6 +11,8 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { GestionTrabajadoresComponent } from './gestion-trabajadores/gestion-trabajadores.component';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     HomeComponent,
     GestionTrabajadoresComponent,
-    TrabajadorComponent
+    TrabajadorComponent,
+    GestionClientesComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,

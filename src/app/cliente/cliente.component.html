@@ -1,0 +1,168 @@
+<div class="container text-center">
+  <div class="mt-5">
+    <div class="card w-75 mx-auto">
+      <div class="card-header">
+        <h2>{{ title }}</h2>
+      </div>
+      <div class="card-body">
+        <div class="container text-center">
+          <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+            <div class="row mt-3">
+              <div class="col">
+                <label for="cedula">Cedula</label>
+                <input
+                  type="text"
+                  formControlName="cedula"
+                  class="form-control mt-2"
+                  [ngClass]="{
+                    'is-invalid': clienteFormControls['cedula'].errors
+                  }"
+                />
+              </div>
+              <div class="col">
+                <label for="nombre">Nombre</label>
+                <input
+                  type="text"
+                  formControlName="nombre"
+                  class="form-control mt-2"
+                  [ngClass]="{
+                    'is-invalid': clienteFormControls['nombre'].errors
+                  }"
+                />
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <label for="cedula">Primer apellido</label>
+                <input
+                  type="text"
+                  formControlName="primer_apellido"
+                  class="form-control mt-2"
+                  [ngClass]="{
+                    'is-invalid': clienteFormControls['primer_apellido'].errors
+                  }"
+                />
+              </div>
+              <div class="col">
+                <label for="segundo_apellido">Segundo apellido</label>
+                <input
+                  type="text"
+                  formControlName="segundo_apellido"
+                  class="form-control mt-2"
+                  [ngClass]="{
+                    'is-invalid': clienteFormControls['segundo_apellido'].errors
+                  }"
+                />
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <label for="usuario">Usuario</label>
+                <input
+                  type="text"
+                  formControlName="usuario"
+                  class="form-control mt-2 {{ formType === 'crear' ? 'w-50 mx-auto' : '' }}"
+                  [ngClass]="{
+                    'is-invalid': clienteFormControls['usuario'].errors
+                  }"
+                />
+              </div>
+              <div *ngIf="formType === 'editar'" class="col">
+                <label for="contrasena">Contraseña</label>
+                <input
+                  type="text"
+                  formControlName="contrasena"
+                  class="form-control mt-2"
+                  [ngClass]="{
+                    'is-invalid': clienteFormControls['contrasena'].errors
+                  }"
+                />
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <label for="correo">Correo</label>
+                <input
+                  type="email"
+                  formControlName="correo"
+                  class="form-control mt-2 w-50 mx-auto"
+                  [ngClass]="{
+                    'is-invalid': clienteFormControls['correo'].errors
+                  }"
+                />
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <label for="usuario">Direcciones</label>
+                <div class="row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      formControlName="direccion_1"
+                      class="form-control mt-2"
+                      [ngClass]="{
+                        'is-invalid': clienteFormControls['direccion_1'].errors
+                      }"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      formControlName="direccion_2"
+                      class="form-control mt-2"
+                      [ngClass]="{
+                        'is-invalid': clienteFormControls['direccion_2'].errors
+                      }"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <label for="usuario">Telefonos</label>
+                <div class="row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      formControlName="telefono_1"
+                      class="form-control mt-2"
+                      [ngClass]="{
+                        'is-invalid': clienteFormControls['telefono_1'].errors
+                      }"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      formControlName="telefono_2"
+                      class="form-control mt-2"
+                      [ngClass]="{
+                        'is-invalid': clienteFormControls['telefono_2'].errors
+                      }"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group mt-5">
+              <button
+                [disabled]="loading || clienteForm.invalid"
+                class="btn btn-primary"
+              >
+                <span
+                  *ngIf="loading"
+                  class="spinner-border spinner-border-sm mr-1"
+                ></span>
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

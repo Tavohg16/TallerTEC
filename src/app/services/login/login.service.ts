@@ -46,7 +46,6 @@ export class LoginService {
   logout() {
     window.localStorage.setItem('loggedIn', 'false');
     this.router.navigate(['/login']);
-    console.log(this.loggedIn);
   }
 
   /**

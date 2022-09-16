@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="container text-center">
+    <div class="row row-cols-1 row-cols-md-2 g-5 mt-5">
+      <div *ngFor="let option of options">
+        <div class="col">
+          <div (click)="goTo(option.route)" class="card w-75 mx-auto">
+            <div class="card-header">
+              {{ option.title }}
+            </div>
+            <div class="card-body">
+              <div class="card-title"><i class="{{ option.icon }} fa-5x"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

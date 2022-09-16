@@ -11,7 +11,6 @@ import { LoginResponse } from '../services/login/login.types';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  submitted: boolean = false;
   loading: boolean = false;
 
   constructor(
@@ -33,7 +32,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
 
     // Caso en el que el form es inválido
     if (this.loginForm.invalid) {
@@ -58,7 +56,7 @@ export class LoginComponent implements OnInit {
           this.loading = false;
         },
         error: (error) => {
-          alert('Su cedula, contraseña o ambas son inválidas');
+          alert('Error al intentar autenticar su usuario.');
           console.log(error);
           this.loading = false;
         },

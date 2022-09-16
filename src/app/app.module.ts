@@ -9,20 +9,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { GestionTrabajadoresComponent } from './gestion-trabajadores/gestion-trabajadores.component';
+import { TrabajadorComponent } from './trabajador/trabajador.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    GestionTrabajadoresComponent
+    GestionTrabajadoresComponent,
+    TrabajadorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]

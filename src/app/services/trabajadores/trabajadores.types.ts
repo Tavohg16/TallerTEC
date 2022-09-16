@@ -1,4 +1,4 @@
-export interface TrabajadorResponse {
+export interface TrabajadoresResponse {
     exito: boolean,
     trabajadores: Trabajador[],
 }
@@ -11,9 +11,14 @@ export interface Trabajador {
     contrasena?: string,
     dia_ingreso: number,
     mes_ingreso: number,
-    ano_ingreso: string,
+    ano_ingreso: number,
     dia_nacimiento: number,
-    mes_naicimiento: number,
+    mes_nacimiento: number,
     ano_nacimiento: number
     rol: string,
+}
+
+export interface TrabajadorResponse {
+    actualizado: boolean,
+    mensaje: string,
 }

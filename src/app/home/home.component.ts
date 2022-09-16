@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
   protected goTo(route: string): void {
-    this.router.navigate([route])
+    this.router.navigate([route]);
   }
 
 }

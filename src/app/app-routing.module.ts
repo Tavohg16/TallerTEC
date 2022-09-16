@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { 
   AuthGuardService as AuthGuard 
 } from './services/auth-guard.service';
+import { TrabajadorComponent } from './trabajador/trabajador.component';
 
 /**
  * Definiendo rutas a componentes
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
   { path: 'gestion-trabajadores', component: GestionTrabajadoresComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
+  { path: 'trabajador', component: TrabajadorComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
   { path: '**', redirectTo: 'home'}
 ];
 

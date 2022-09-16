@@ -13,6 +13,8 @@ import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { GestionCitasComponent } from './gestion-citas/gestion-citas.component';
+import { CitaComponent } from './cita/cita.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ClienteComponent } from './cliente/cliente.component';
     GestionTrabajadoresComponent,
     TrabajadorComponent,
     GestionClientesComponent,
-    ClienteComponent
+    ClienteComponent,
+    GestionCitasComponent,
+    CitaComponent
   ],
   imports: [
     BrowserModule,

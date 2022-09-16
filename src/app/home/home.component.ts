@@ -22,12 +22,7 @@ export class HomeComponent implements OnInit {
     {
       title: "Registro de citas",
       icon: "fa-solid fa-calendar-check",
-      route: "registro-citas"
-    },
-    {
-      title: "Facturación",
-      icon: "fa-solid fa-file-invoice-dollar",
-      route: "facturacion"
+      route: "gestion-citas"
     },
     {
       title: "Reportes",

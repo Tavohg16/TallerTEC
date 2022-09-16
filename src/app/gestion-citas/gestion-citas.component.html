@@ -1,0 +1,56 @@
+<div class="container text-center">
+  <div class="row align-items-center mt-5">
+    <div class="col align-self-center">
+      <button type="button" class="btn btn-primary" (click)="crearCita()">
+        Crear cita
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID Cita</th>
+            <th>Cédula cita</th>
+            <th>Mecánico</th>
+            <th>Fecha</th>
+            <th>Placa vehículo</th>
+            <th>Sucursal</th>
+            <th>Servicio</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cita of citas">
+            <th>{{ cita.id }}</th>
+            <td>{{ cita.cedula_cliente }}</td>
+            <td>{{ cita.mecanico }}</td>
+            <td>{{ fechaCita(cita) }}</td>
+            <td>{{ cita.placa_vehiculo }}</td>
+            <td>{{ cita.sucursal }}</td>
+            <td>{{ cita.servicio }}</td>
+            <td>
+              <button
+                *ngIf="cita.estado; else elseCita"
+                type="button"
+                class="btn btn-primary"
+                (click)="facturarCita(cita)"
+              >
+                <i class="fa-solid fa-circle-exclamation"></i>
+              </button>
+              <ng-template #elseCita
+                ><button
+                  type="button"
+                  class="btn btn-primary"
+                  (click)="facturarCita(cita)"
+                >
+                  <i class="fa-solid fa-file-invoice"></i></button
+              ></ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

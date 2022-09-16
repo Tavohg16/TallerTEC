@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
+import { CitaComponent } from './cita/cita.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { GestionCitasComponent } from './gestion-citas/gestion-citas.component';
 import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'gestion-clientes', component: GestionClientesComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
   { path: 'cliente', component: ClienteComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
   { path: 'gestion-citas', component: GestionCitasComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
+  { path: 'cita', component: CitaComponent ,  pathMatch: 'full', canActivate: [AuthGuard] },
   { path: '**', redirectTo: 'home'}
 ];
 

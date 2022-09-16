@@ -5,7 +5,7 @@ export interface CitasResponse {
 
 export interface Cita {
     id: string,
-    mecanico: string,
+    mecanico?: string,
     cedula_cliente: string,
     dia_cita: number
     mes_cita: number

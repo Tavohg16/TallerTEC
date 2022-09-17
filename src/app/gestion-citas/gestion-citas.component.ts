@@ -19,6 +19,10 @@ export class GestionCitasComponent implements OnInit {
   constructor(private citasService: CitasService, private router: Router) {}
 
   ngOnInit(): void {
+    this.actualizarCitas();
+  }
+
+  private actualizarCitas() {
     this.citasService.todasCitas().subscribe({
       next: (citasResponse: CitasResponse) => {
         if (citasResponse.exito) {
@@ -55,6 +59,7 @@ export class GestionCitasComponent implements OnInit {
     this.citasService.generarFactura(cita.id).subscribe({
       next: (facturaResponse: FacturaResponse) => {
         alert(facturaResponse.mensaje);
+        this.actualizarCitas();
       },
       error: (error) => {
         alert(`Error al facturar cita.`);

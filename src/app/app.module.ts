@@ -15,6 +15,7 @@ import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.co
 import { ClienteComponent } from './cliente/cliente.component';
 import { GestionCitasComponent } from './gestion-citas/gestion-citas.component';
 import { CitaComponent } from './cita/cita.component';
+import { ReportesComponent } from './reportes/reportes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CitaComponent } from './cita/cita.component';
     GestionClientesComponent,
     ClienteComponent,
     GestionCitasComponent,
-    CitaComponent
+    CitaComponent,
+    ReportesComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { CitaComponent } from './cita/cita.component';
     HttpClientModule,
     FormsModule, 
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
